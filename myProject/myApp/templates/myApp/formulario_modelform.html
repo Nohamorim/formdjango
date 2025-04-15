@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" 
@@ -8,6 +8,13 @@
     <title>ModelForm</title>
 </head>
 <body>
-<h1>ModelForm</h1>    
+    <h1>Formulário com ModelForm</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Enviar</button>
+    </form>
+
 </body>
 </html>
