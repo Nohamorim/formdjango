@@ -1,0 +1,28 @@
+# Ambiente virtual
+myVenv/
+
+# Banco de dados SQLite
+*.sqlite3
+
+# Bytecode Python
+__pycache__/
+*.py[cod]
+*.so
+
+# Logs
+*.log
+
+# Configurações locais e variáveis de ambiente
+.env
+*.env
+local_settings.py
+
+# Arquivos do VSCode (se estiver usando)
+.vscode/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos de troca do Vim ou editores similares
+*.swp
