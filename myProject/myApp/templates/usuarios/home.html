@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <title>Cadastre-se!</title>
+</head>
+<body>
+  <nav style="background-color: bisque !important;" class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1">Cadastre-se!</span>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <h1>Cadastro de Usuários</h1>
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button class="btn btn-primary mt-2" type="submit">Enviar</button>
+    </form>
+  </div>
+</body>
+</html>
