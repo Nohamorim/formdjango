@@ -6,7 +6,8 @@ SEXO_CHOICES = (
 )
 
 class Cliente(models.Model):
-    nome = models.CharField(max_length=30)
+    id_usuario = models.AutoField(primary_key=True)
+    nome = models.CharField(max_length=100)
     data_nascimento = models.DateField(blank=True, null=True)
     sexo = models.CharField(max_length=1, choices=SEXO_CHOICES)
     email = models.EmailField(blank=True, null=True)
