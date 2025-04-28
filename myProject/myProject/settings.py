@@ -75,8 +75,12 @@ WSGI_APPLICATION = 'myProject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'cadastro',          # Nome do seu banco que você criou
+        'USER': 'noemy',              # Seu usuário do PostgreSQL
+        'PASSWORD': 'umaSenhaSegura', # Sua senha do usuário noemy
+        'HOST': 'localhost',          # Ou o IP do servidor se for remoto
+        'PORT': '5432',               # Porta padrão do PostgreSQL
     }
 }
 
