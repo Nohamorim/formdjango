@@ -1,9 +1,18 @@
 {% extends 'usuarios/base.html' %}
 {% block conteudo %}
-
-    <form method="post">
+  <div class="container mt-4">
+    <form method="post" class="mx-auto" style="max-width: 500px;">
       {% csrf_token %}
-      {{ form.as_p }}
-      <button class="form-control-sm" type="submit">Enviar</button>
+      {% for field in form %}
+        <div class="mb-3">
+          <label for="{{ field.id_for_label }}" class="form-label">{{ field.label }}</label>
+          {{ field }}
+          {% if field.errors %}
+            <div class="text-danger">{{ field.errors }}</div>
+          {% endif %}
+        </div>
+      {% endfor %}
+      <button class="btn btn-primary" type="submit">Enviar</button>
     </form>
+  </div>
 {% endblock %}
