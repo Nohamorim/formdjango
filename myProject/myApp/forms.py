@@ -1,9 +1,9 @@
 from django import forms
-from myApp.models import Cliente  # Ajuste o caminho se estiver em outro lugar
+from myApp.models import Cliente  
 
 SEXO_CHOICES = (
-    ('m', 'Masculino'),
-    ('f', 'Feminino')
+    ('M', 'Masculino'),
+    ('F', 'Feminino')
 )
 
 class MeuFormulario(forms.Form):

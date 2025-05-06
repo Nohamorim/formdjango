@@ -1,8 +1,8 @@
 from django.db import models
 
 SEXO_CHOICES = (
-    ('m', 'Masculino'),
-    ('f', 'Feminino'),
+    ('M', 'Masculino'),
+    ('F', 'Feminino'),
 )
 
 class Cliente(models.Model):
